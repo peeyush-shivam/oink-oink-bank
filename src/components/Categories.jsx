@@ -106,9 +106,7 @@ function Categories({ setCategories, categories, setExpense, expense }) {
               type="text"
               onChange={handleAddCategories}
             />
-            <button type="submit" onClick={handleDone}>
-              Done
-            </button>
+            <button type="submit">Done</button>
           </form>
         </div>
       )}
