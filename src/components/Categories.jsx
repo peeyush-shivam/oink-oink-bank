@@ -20,6 +20,7 @@ function Categories({ setCategories, categories, setExpense, expense }) {
 
   const handleCategorySubmit = (event) => {
     event.preventDefault();
+    setAddCategory(false);
     setCategories([...categories, cat]);
     setCat("");
   };
@@ -64,10 +65,6 @@ function Categories({ setCategories, categories, setExpense, expense }) {
     console.log("Temporary categories", tempCategories);
     tempCategories.splice(index, 1);
     setCategories(tempCategories);
-  };
-
-  const handleDone = () => {
-    setAddCategory(false);
   };
 
   return (
