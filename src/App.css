@@ -1,0 +1,307 @@
+:root {
+  --primary-background-color: rgb(26, 27, 30);
+  --primary-font-color: #dad7cd;
+  --secondary-background-color: rgb(193, 194, 197);
+  --secondary-font-color: #3a5a40;
+  --button-background-color: #a3b18a;
+
+  --color-main: linear-gradient(
+    to right,
+    hsl(246, 94%, 67%),
+    hsl(265, 94%, 67%)
+  );
+  --color-secondary: hsl(248, 30%, 95%);
+  --color-accent: linear-gradient(
+    to right bottom,
+    hsl(150, 62%, 65%),
+    hsl(176, 68%, 64%)
+  );
+  --color-error: hsl(0, 69%, 60%);
+  --color-txt-main: hsl(222, 20%, 35%);
+  --color-txt-grey: hsl(0, 0%, 66%);
+  --color-shadow: hsla(0, 0%, 0%, 0.16);
+  --round-borders: 2rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--primary-background-color);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.app-container {
+  height: 90%;
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+
+.navigation-button {
+  border: none;
+  border-radius: 20px;
+  height: 3rem;
+  width: 8rem;
+  background-color: darkslategray;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-font-color);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.expenses-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.expenses-container p {
+  font-size: 28px;
+  font-weight: 800;
+  width: 100%;
+  color: var(--primary-font-color);
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  display: flex;
+  color: var(--primary-font-color);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.expenses-container form input {
+  height: 2rem;
+  width: 90%;
+  border-radius: 25px;
+  background-color: var(--button-background-color);
+  border: none;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.expenses-container button {
+  position: absolute;
+  top: 425px;
+  margin-left: 25vw;
+  margin-top: 30px;
+}
+
+.categories-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.categories-container > form {
+  display: flex;
+  position: absolute;
+  top: 400px;
+}
+
+.categories-container form select {
+  border-radius: 1rem;
+  width: 8rem;
+  background-color: var(--button-background-color);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.add-category-container {
+  position: absolute;
+  top: 170px;
+  width: 70%;
+}
+.add-category-container form {
+  margin-top: 20px;
+  display: flex;
+  position: absolute;
+  top: 400px;
+}
+
+.add-category-container input {
+  height: 2rem;
+  width: 90%;
+  border-radius: 25px;
+  background-color: var(--button-background-color);
+  border: none;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 10px;
+}
+.add-category-container button {
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  height: 2rem;
+  width: 8rem;
+  background-color: darkslategray;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-font-color);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.remove-categories {
+  display: flex;
+  flex-wrap: wrap;
+  /*  margin-top: 10px; */
+}
+.each-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 10px;
+  margin: 10px 10px 0 0;
+  /* background-color: darkslategray; */
+  background-color: var(--button-background-color);
+  padding: 7px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.each-category button {
+  background-color: darkred;
+  border: none;
+  border-radius: 50%;
+}
+
+.button-container button {
+  border: none;
+  border-radius: 20px;
+  height: 2rem;
+  width: 6rem;
+  background-color: darkslategray;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-font-color);
+  font-family: "Josefin Sans", sans-serif;
+}
+.button-container button:first-child {
+  margin-right: 10px;
+}
+
+.remove-button {
+  color: var(--primary-font-color);
+}
+
+.view-expenses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.filter-container {
+  display: flex;
+  width: 100%;
+}
+
+.filter-container select {
+  border-radius: 1rem;
+  width: 8rem;
+  background-color: var(--button-background-color);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.expense-table {
+  width: 95vw;
+}
+.expense-table table {
+  width: 100%;
+  color: var(--primary-font-color);
+}
+
+tbody > tr > td:last-child {
+  text-align: center;
+  color: var(--color-error);
+}
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.pagination button {
+  background-color: darkslategray;
+  border: none;
+  margin-top: -10px;
+}
+.expense-totals {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-font-color);
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.expense-totals h3 span {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--color-error);
+}
+
+.expense-category {
+  background-color: var(--button-background-color);
+  color: black;
+  padding: 1px 10px;
+  border-radius: 1rem;
+}
+
+.expense-category span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.show-button {
+  border: none;
+  border-radius: 20px;
+  height: 2rem;
+  width: 6rem;
+  background-color: darkslategray;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-font-color);
+  font-family: "Josefin Sans", sans-serif;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
