@@ -66,6 +66,10 @@ function Categories({ setCategories, categories, setExpense, expense }) {
     setCategories(tempCategories);
   };
 
+  const handleDone = () => {
+    setAddCategory(false);
+  };
+
   return (
     <div className="categories-container">
       <form>
@@ -105,7 +109,9 @@ function Categories({ setCategories, categories, setExpense, expense }) {
               type="text"
               onChange={handleAddCategories}
             />
-            <button type="submit">Done</button>
+            <button type="submit" onClick={handleDone}>
+              Done
+            </button>
           </form>
         </div>
       )}
