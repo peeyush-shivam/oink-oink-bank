@@ -53,7 +53,7 @@ function Expense({
           required
           type="text"
           value={expense.label}
-          placeholder="Ex: I nom you"
+          placeholder="Ex: I nom you 💋"
           onChange={handleLabelChange}
         />{" "}
         <br />
@@ -63,7 +63,7 @@ function Expense({
           required
           type="text"
           value={expense.description}
-          placeholder="Ex: I nom you so so much"
+          placeholder="Ex: Ju a bad bitch!! 🥵"
           onChange={handleDescriptionChange}
           style={{ height: "3rem", wordWrap: "normal" }}
         />{" "}
@@ -73,7 +73,7 @@ function Expense({
         <input
           required
           type="number"
-          placeholder="Ex: It is priceless"
+          placeholder="Ex: It is priceless ✨"
           value={expense.amount}
           onChange={handleAmountChange}
         />
