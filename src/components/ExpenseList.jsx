@@ -19,7 +19,7 @@ function ExpenseList({ expenses, setExpenses }) {
   }, [expenses]);
 
   useEffect(() => {
-    const total = expenses.reduce(
+    const total = filteredExpenses.reduce(
       (acc, expense) => acc + parseInt(expense.amount),
       0
     );
