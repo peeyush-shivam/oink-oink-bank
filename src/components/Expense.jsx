@@ -29,19 +29,13 @@ function Expense({
     console.log("Add Expense clicked.");
     setExpenses([...expenses, expense]);
     setExpense({
-      id: "",
+      id: `${(Math.random() * 99999).toFixed(0)}`,
       label: "",
       date: `${date}`,
       amount: "",
       description: "",
       category: "",
-      split: split,
-      splitCount: 1,
     });
-  };
-
-  const handleSplit = () => {
-    setSplit(!split);
   };
 
   return (

@@ -10,7 +10,7 @@ function Categories({ setCategories, categories, setExpense, expense }) {
   };
   const [removeCat, setRemoveCat] = useState(false);
 
-  console.log("cat", cat);
+  // console.log("cat", cat);
 
   console.log("Add Category: ", addCategory, "Remove Category: ", removeCat);
 

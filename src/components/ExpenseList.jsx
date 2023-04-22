@@ -69,18 +69,19 @@ function ExpenseList({ expenses, setExpenses }) {
   for (let i = 1; i <= totalPages; i++) {
     pageNumbers.push(i);
   }
-
   const prevPage = () => {
     if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+      setCurrentPage((currentPage) => currentPage - 1);
     }
   };
 
   const nextPage = () => {
     if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
+      setCurrentPage((currentPage) => currentPage + 1);
     }
   };
+
+  console.log(filteredExpenses.length);
 
   const handleShow = () => {
     setShow(!show);
